@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pedromassango.appintro.IntroActivity">
+
+    <ImageView
+        android:id="@+id/intro_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:maxHeight="110dp"
+        android:maxWidth="110dp"
+        android:minHeight="90dp"
+        android:minWidth="90dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/intro_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:text="@string/app_name"
+        android:textColor="@color/intro_white_color"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/intro_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingEnd="32dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingStart="32dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:text="@string/descp"
+        android:textColor="#a6a6a6"
+        android:textSize="14sp" />
+
+</LinearLayout>
