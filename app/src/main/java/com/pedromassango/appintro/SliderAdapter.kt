@@ -1,9 +1,7 @@
 package com.pedromassango.appintro
 
 import android.content.Context
-import android.support.v4.app.FragmentManager
 import android.support.v4.view.PagerAdapter
-import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +11,7 @@ import kotlinx.android.synthetic.main.fragment_intro.view.*
 /**
  * Created by Pedro Massango on 1/26/18.
  */
-class SliderAdapter(private val introSlides: ArrayList<IntroSlide>) : PagerAdapter() {
+class SliderAdapter(private val introSlides: MutableList<IntroSlide>) : PagerAdapter() {
 
     override fun isViewFromObject(view: View?, `object`: Any?): Boolean {
         return view == `object` as LinearLayout

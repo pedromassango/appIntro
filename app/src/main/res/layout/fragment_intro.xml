@@ -43,7 +43,7 @@
         android:paddingTop="32dp"
         android:paddingBottom="32dp"
         android:text="@string/descp"
-        android:textColor="#a6a6a6"
+        android:textColor="#e4e4e4"
         android:textSize="14sp" />
 
 </LinearLayout>

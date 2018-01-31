@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_intro.*
 
 abstract class IntroActivity : AppCompatActivity(), SliderActionListener {
 
-    private val slides = arrayListOf<IntroSlide>()
+    private val slides = mutableListOf<IntroSlide>()
     private var currentSlideIndex = 0
     abstract fun setupIntro()
 
@@ -26,13 +26,9 @@ abstract class IntroActivity : AppCompatActivity(), SliderActionListener {
         val adapter = SliderAdapter(slides)
         intro_view_pager_slider.adapter = adapter
         intro_view_pager_slider.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-            override fun onPageScrollStateChanged(state: Int) {
+            override fun onPageScrollStateChanged(state: Int) {}
 
-            }
-
-            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-
-            }
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
 
             override fun onPageSelected(position: Int) {
 
@@ -45,7 +41,7 @@ abstract class IntroActivity : AppCompatActivity(), SliderActionListener {
                     false -> {
                         btn_back.visibility = View.VISIBLE
 
-                        btn_next.text = if (currentSlideIndex == slides.size-1) "FINISH" else "NEXT"
+                        btn_next.text = if (currentSlideIndex == slides.size - 1) "FINISH" else "NEXT"
                     }
                 }
             }
@@ -57,23 +53,23 @@ abstract class IntroActivity : AppCompatActivity(), SliderActionListener {
                     intro_view_pager_slider.currentItem - 1,
                     true)
             // Notify back pressed
-            onBack( slideIndex = currentSlideIndex)
+            onBack(slides[currentSlideIndex])
         }
 
         btn_next.setOnClickListener {
 
-            if(slides.size-1 == currentSlideIndex){
+            if (slides.size - 1 == currentSlideIndex) {
 
                 // DONE CLICKED when no more slides
-                onFinish( currentSlideIndex)
+                onFinish(slides[currentSlideIndex])
 
-            }else {
+            } else {
                 intro_view_pager_slider.setCurrentItem(
                         intro_view_pager_slider.currentItem + 1,
                         true)
 
                 // notify next btn click
-                onNext( currentSlideIndex)
+                onNext(slides[currentSlideIndex])
             }
         }
     }
@@ -81,6 +77,9 @@ abstract class IntroActivity : AppCompatActivity(), SliderActionListener {
     private fun addDotsIndicator(position: Int) {
         var index = 0
         intro_dots_layout.removeAllViews()
+
+        // Change activity background color
+        root_view.setBackgroundColor(slides[position].backgroundColor)
 
         while (index != slides.size) {
             val tvDot = TextView(this)
@@ -102,5 +101,4 @@ abstract class IntroActivity : AppCompatActivity(), SliderActionListener {
 
         slides.add(slide)
     }
-
 }
