@@ -1,5 +1,9 @@
+
+[![Release](https://jitpack.io/v/pedromassango/appIntro.svg)]
+(https://jitpack.io/#pedromassango/appIntro)
+
 # AppIntro
-Um simples pacote para adicionar telas de introdução no seu aplicativo.
+Um simples pacote para adicionar telas de introdução no seu aplicativo. Desenvolvido com a linguagem Kotlin.
 
 # Contribuição
 Você pode contribuir para este projeto, fazendo o Fork, e o pull request. Ajude a manter o projeto, contribuindo.
