@@ -1,6 +1,5 @@
 
-[![Release](https://jitpack.io/v/pedromassango/appIntro.svg)]
-(https://jitpack.io/#pedromassango/appIntro)
+[![](https://jitpack.io/v/pedromassango/appIntro.svg)](https://jitpack.io/#pedromassango/appIntro)
 
 # AppIntro
 Um simples pacote para adicionar telas de introdução no seu aplicativo. Desenvolvido com a linguagem Kotlin.
