@@ -17,19 +17,6 @@ class TestIntroActivity : IntroActivity() {
                 getString(R.string.descp),
                 backgroundColor = Color.MAGENTA,
                 mIcon = R.mipmap.ic_launcher))
-        addSlide(IntroSlide(getString(R.string.app_name),
-                getString(R.string.descp),
-                backgroundColor = Color.BLUE,
-                mIcon = R.mipmap.ic_launcher))
-
-        addSlide(IntroSlide(getString(R.string.app_name),
-                getString(R.string.descp),
-                backgroundColor = Color.BLACK,
-                mIcon = R.mipmap.ic_launcher))
-        addSlide(IntroSlide(getString(R.string.app_name),
-                getString(R.string.descp),
-                backgroundColor = Color.RED,
-                mIcon = R.mipmap.ic_launcher))
     }
 
     override fun onBack(slide: IntroSlide) {
