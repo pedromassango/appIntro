@@ -6,12 +6,12 @@ Você pode contribuir para este projeto, fazendo o Fork, e o pull request. Ajude
 
 # Contactos
 Fale comigo pelo <a href="https://www.facebook.com/pedromassango.m">Facebook</a>, <a href="https://twitter.com/pedro_massango3">Twitter</a>.
+
 Visite também o meu <a href="https://www.youtube.com/channel/UCBiJzXGvkuT9aG2Yq8BYYnQ">Canal no youtube</a>.
 
 <img src="/screenshots/device-2018-02-01-154210.png" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154304.png" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154329.png" width="260" height="480">
 
 ## Requisitos
-​
 - Android API level 16 ou posterior
 - Sua IDE favorita
 
@@ -76,7 +76,8 @@ Para adicionar um slide você deve usar a classe `IntroSlide`, como descrita aba
 ```
 
 
-Crie uma classe que extenda de `IntroActivity` e sobrescreva os métodos necessários:
+Crie uma classe que extenda de `IntroActivity` e sobrescreva os seguintes métodos:
+
 `setupIntro()` - Inicie/Adicione os slides neste método.
 `onBack(slide: IntroSlide)` - Será executado quando o botão BACK for clicado
 `onNext(slide: IntroSlide)` - Será executado quando o botão NEXT for clicado
@@ -96,6 +97,8 @@ class TestIntroActivity : IntroActivity() {
                 getString(R.string.descp),
                 backgroundColor = Color.MAGENTA,
                 mIcon = R.mipmap.ic_launcher))
+
+        // Add more slides here
     }
 
     override fun onBack(slide: IntroSlide) {
