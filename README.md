@@ -12,7 +12,7 @@ Fale comigo pelo <a href="https://www.facebook.com/pedromassango.m">Facebook</a>
 
 Visite também o meu <a href="https://www.youtube.com/channel/UCBiJzXGvkuT9aG2Yq8BYYnQ">Canal no youtube</a>.
 
-<img src="/screenshots/device-2018-02-01-154210.png" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154304.png" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154329.png" width="260" height="480">
+<img src="/screenshots/giff.gif" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154210.png" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154304.png" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154329.png" width="260" height="480">
 
 ## Requisitos
 - Android API level 16 ou posterior
