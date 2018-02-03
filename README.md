@@ -17,10 +17,10 @@ Visite também o meu <a href="https://www.youtube.com/channel/UCBiJzXGvkuT9aG2Yq
 <img src="/screenshots/device-2018-02-01-154210.png" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154304.png" width="260" height="480"> <img src="/screenshots/device-2018-02-01-154329.png" width="260" height="480">
 
 ## Requisitos
-- Android API level 16 ou posterior
-- Sua IDE favorita
+- Android API level 16 ou posterior;
+- Sua IDE favorita.
 
-## Setting up
+## Inicializando
 
 Gradle:
 
@@ -84,8 +84,11 @@ Para adicionar um slide você deve usar a classe `IntroSlide`, como descrita aba
 Crie uma classe que extenda de `IntroActivity` e sobrescreva os seguintes métodos:
 
 `setupIntro()` - Inicie/Adicione os slides neste método.
+
 `onBack(slide: IntroSlide)` - Será executado quando o botão BACK for clicado
+
 `onNext(slide: IntroSlide)` - Será executado quando o botão NEXT for clicado
+
 `onFinish(slide: IntroSlide)` - Será executado quando o último slide for alcançado, e não haver mais slides.
 
 Código de exemplo:
