@@ -58,7 +58,7 @@ abstract class IntroActivity : AppCompatActivity(), SliderActionListener {
 
         btn_next.setOnClickListener {
 
-            if (slides.size - 1 == currentSlideIndex) {
+            if ((slides.size - 1) == currentSlideIndex) {
 
                 // DONE CLICKED when no more slides
                 onFinish(slides[currentSlideIndex])
