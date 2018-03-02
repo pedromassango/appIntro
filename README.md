@@ -22,16 +22,16 @@ Visite também o meu <a href="https://www.youtube.com/channel/UCBiJzXGvkuT9aG2Yq
 
 ## Inicializando
 
-Gradle:
+**Gradle:**
 
 Passo 1. Adicionar o jitpack.io
 Adiciona isto no seu build.gradle do diretorio principal:
 ```groovy
 allprojects {
-	repositories {
-		...
-		maven { url 'https://jitpack.io' }
-	}
+    repositories {
+	        ...
+	        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 
@@ -43,7 +43,7 @@ dependencies {
 ```
 
 
-Maven:
+**Maven:**
 
 Passo 1. registar o jitpack.io
 ```xml
@@ -74,7 +74,7 @@ Para adicionar um slide você deve usar a classe `IntroSlide`, como descrita aba
             ,
             // Slide description (String)
             ,
-            // Slide bacground color (Int)
+            // Slide background color (Int)
             ,
             // Slide icon (resource icon -> Int)
             )
@@ -94,31 +94,35 @@ Crie uma classe que extenda de `IntroActivity` e sobrescreva os seguintes métod
 Código de exemplo:
 ```java
 class TestIntroActivity : IntroActivity() {
-
+    
     // Do not override onCreate()
-
+    
     override fun setupIntro() {
-
+        
         // Adding slides to show
+        
         addSlide(IntroSlide(
                 getString(R.string.app_name).toUpperCase(),
                 getString(R.string.descp),
                 backgroundColor = Color.MAGENTA,
                 mIcon = R.mipmap.ic_launcher))
-
+                
         // Add more slides here
     }
-
+    
     override fun onBack(slide: IntroSlide) {
         // Back pressed
     }
-
+    
     override fun onNext(slide: IntroSlide) {
         // Next pressed
     }
-
+    
     override fun onFinish(slide: IntroSlide) {
         // All slides was shown.
     }
 }
 ```
+
+Note que não sobrescrevi o **onCreate()** isso por que, não precisamos dele aqui, apenas devemos iniciar
+os trabalhos no método **setupIntro().**
