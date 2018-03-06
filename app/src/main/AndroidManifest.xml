@@ -3,5 +3,9 @@
     package="com.pedromassango.appintro">
 
     <application
-        android:supportsRtl="true"/>
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+    </application>
+
 </manifest>
