@@ -125,4 +125,4 @@ class TestIntroActivity : IntroActivity() {
 ```
 
 Note que não sobrescrevi o **onCreate()** isso por que, não precisamos dele aqui, apenas devemos iniciar
-os trabalhos no método **setupIntro().**
+os trabalhos no método **setupIntro()**.
