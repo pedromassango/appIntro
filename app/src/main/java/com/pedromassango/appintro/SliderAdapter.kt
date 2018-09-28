@@ -13,15 +13,15 @@ import kotlinx.android.synthetic.main.fragment_intro.view.*
  */
 class SliderAdapter(private val introSlides: MutableList<IntroSlide>) : PagerAdapter() {
 
-    override fun isViewFromObject(view: View?, `object`: Any?): Boolean {
-        return view == `object` as LinearLayout
+    override fun isViewFromObject(view: View, p1: Any): Boolean {
+        return view == p1 as LinearLayout
         //return true
     }
 
     override fun getCount(): Int = introSlides.size
 
-    override fun instantiateItem(container: ViewGroup?, position: Int): Any {
-        val inflater = container!!.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    override fun instantiateItem(container: ViewGroup, position: Int): Any {
+        val inflater = container.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.fragment_intro, container, false)
 
         with(view) {
@@ -38,7 +38,7 @@ class SliderAdapter(private val introSlides: MutableList<IntroSlide>) : PagerAda
         return view
     }
 
-    override fun destroyItem(container: ViewGroup?, position: Int, `object`: Any?) {
-        container!!.removeView( `object` as LinearLayout)
+    override fun destroyItem(container: ViewGroup, position: Int, p1: Any) {
+        container.removeView( p1 as LinearLayout)
     }
 }
