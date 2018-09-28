@@ -96,6 +96,10 @@ abstract class IntroActivity : AppCompatActivity(), SliderActionListener {
         }
     }
 
+    /**
+     * Insert a new slide on list
+     * @param slide the slide to be added
+     */
     fun addSlide(slide: IntroSlide) {
         checkNotNull(slide)
 
